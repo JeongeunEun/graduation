@@ -10,11 +10,11 @@ function on_click_checkbox(current_id, other_id) {
 function get_page() {
     for(let chcekbox of document.getElementsByClassName("home_chcekbox")) {
         if(chcekbox.checked) {
-            return chcekbox.id
+            return `${chcekbox.id}.html`
         }
     }
 }
 
 function on_click_next_button(next_page) {
-    alert(get_page())
+    window.location.href = next_page
 }

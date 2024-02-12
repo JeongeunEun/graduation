@@ -8,22 +8,22 @@
         <div style="text-align: center;">
             <input 
                 type="checkbox"
-                id="student_checkbox" class="home_chcekbox"
-                onclick="on_click_checkbox('student_checkbox', 'graduate_checkbox')"
+                id="student" class="home_chcekbox"
+                onclick="on_click_checkbox('student', 'graduate')"
             />
-            <label for="student_checkbox">재학생</label>
+            <label for="student">재학생</label>
             <br>
             <input 
                 type="checkbox" 
-                id="graduate_checkbox" class="home_chcekbox"
-                onclick="on_click_checkbox('graduate_checkbox', 'student_checkbox')"
+                id="graduate" class="home_chcekbox"
+                onclick="on_click_checkbox('graduate', 'student')"
             />
-            <label for="graduate_checkbox">졸업생</label>
+            <label for="graduate">졸업생</label>
         </div>
         <div style="text-align: right;">
             <input 
                 type="button" value="다음"
-                onclick="on_click_next_button('student.html')"
+                onclick="on_click_next_button(get_page())"
             />
         </div>
     </body>
