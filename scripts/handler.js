@@ -8,7 +8,10 @@ function onClickCheckbox(className, id) {
     }
 }
 
-function onClickNextButton(next_page) {
+function onClickNextButton(next_page, callback=null) {
+    if(callback !== null) {
+        callback()
+    }
     window.location.href = next_page;
 }
 
@@ -18,4 +21,8 @@ function getPageWithCheckbox(className) {
             return `/pages/${chcekbox.id}.html`;
         }
     }
+}
+
+function getText() {
+    return sessionStorage.getItem("text")
 }
