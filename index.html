@@ -2,28 +2,28 @@
     <head>
         <meta charset="UTF-8">
         <title>2024년 한밭대학교 졸업 학위 수여식</title>
-        <script src="./scripts/on_click_handler.js"></script>
+        <script src="/scripts/handler.js"></script>
     </head>
     <body>
         <div style="text-align: center;">
             <input 
                 type="checkbox"
                 id="student" class="index_checkbox"
-                onclick="on_click_checkbox('student', 'graduate')"
+                onclick="onClickCheckbox('index_checkbox', 'student')"
             />
             <label for="student">재학생</label>
             <br>
             <input 
                 type="checkbox" 
                 id="graduate" class="index_checkbox"
-                onclick="on_click_checkbox('graduate', 'student')"
+                onclick="onClickCheckbox('index_checkbox', 'graduate')"
             />
             <label for="graduate">졸업생</label>
         </div>
         <div style="text-align: right;">
             <input 
                 type="button" value="다음"
-                onclick="on_click_next_button(get_page())"
+                onclick="onClickNextButton(getPageWithCheckbox('index_checkbox'))"
             />
         </div>
     </body>

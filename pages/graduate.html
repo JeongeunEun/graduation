@@ -1,9 +1,38 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>test</title>
+        <title>졸업생</title>
+        <script src="/scripts/handler.js"></script>
     </head>
     <body>
-        <p>졸업생을 선택함</p>
+        <div style="text-align: center;">
+            <label>이름을 입력해 주세요.</label>
+            <br>
+            <input 
+                type="text"
+                id="text_field"
+            >
+            <br><br>
+            <label>학과를 선택해 주세요.</label>
+            <br>
+            <input 
+                type="checkbox" 
+                id="major_computer" class="major_checkbox"
+                onclick="onClickCheckbox('major_checkbox', 'major_computer')"
+            >
+            <label for="major_computer">컴공</label>
+            <input 
+                type="checkbox" 
+                id="major_other" class="major_checkbox"
+                onclick="onClickCheckbox('major_checkbox', 'major_other')"
+            >
+            <label for="major_other">그 외</label>
+        </div>
+        <div style="text-align: right;">
+            <input 
+                type="button" value="다음"
+                onclick="onClickNextButton(getPageWithCheckbox('major_checkbox'))"
+            >
+        </div>
     </body>
 </html>
