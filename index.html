@@ -3,9 +3,17 @@
         <meta charset="UTF-8">
         <title>2024년 한밭대학교 졸업 학위 수여식</title>
         <script src="scripts/handler.js"></script>
+        <link rel="stylesheet", href="css/main.css">
+        <script>
+            var screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+            var screenHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+
+            alert("현재 스크린 너비: " + screenWidth);
+            alert("현재 스크린 높이: " + screenHeight);
+        </script>
     </head>
     <body>
-        <div style="text-align: center;">
+        <div>
             <input 
                 type="checkbox"
                 id="student" class="index_checkbox"
@@ -20,7 +28,7 @@
             />
             <label for="graduate">졸업생</label>
         </div>
-        <div style="text-align: right;">
+        <div class="nextButton">
             <input 
                 type="button" value="다음"
                 onclick="onClickNextButton(getPageWithCheckbox('index_checkbox'))"
