@@ -33,3 +33,22 @@ function getPageWithCheckbox(className) {
 function getText() {
     return sessionStorage.getItem("text");
 }
+
+function getScrrenSize() {
+    let screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+    let screenHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+
+    return {
+        width: screenWidth,
+        height: screenHeight
+    }
+}
+
+function setImageSize(imgID) {
+    alert("call");
+    let img = document.getElementById(imgID);
+    let x = getScrrenSize().height / img.height;     // 비율
+
+    img.width *= x;
+    img.height *= x;
+}
