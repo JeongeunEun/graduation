@@ -18,7 +18,7 @@ function onClickNextButton(next_page, callback=null) {
 function getPageWithCheckbox(className) {
     for(let chcekbox of document.getElementsByClassName(className)) {
         if(chcekbox.checked) {
-            return `pages/${chcekbox.id}.html`;
+            return `./pages/${chcekbox.id}.html`;
         }
     }
 }
