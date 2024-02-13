@@ -9,8 +9,13 @@ function onClickCheckbox(className, id) {
 }
 
 function onClickNextButton(next_page, callback=null) {
+    if(next_page === null) {
+        alert("재학생 또는 졸업생을 선택해 주세요.");
+        return null;
+    }
+
     if(callback !== null) {
-        callback()
+        callback();
     }
     window.location.href = next_page;
 }
@@ -21,8 +26,10 @@ function getPageWithCheckbox(className) {
             return `${chcekbox.id}.html`;
         }
     }
+
+    return null;
 }
 
 function getText() {
-    return sessionStorage.getItem("text")
+    return sessionStorage.getItem("text");
 }
