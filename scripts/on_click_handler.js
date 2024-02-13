@@ -10,7 +10,7 @@ function on_click_checkbox(current_id, other_id) {
 function get_page() {
     for(let chcekbox of document.getElementsByClassName("index_checkbox")) {
         if(chcekbox.checked) {
-            return `/pages/${chcekbox.id}.html`
+            return `./pages/${chcekbox.id}.html`
         }
     }
 }
