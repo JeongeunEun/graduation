@@ -21,9 +21,14 @@ div {
     text-align: center;
 }
 
+
+
+
 label {
     font-size: 180%;
     font-family: "GowunBatangBold";
+    vertical-align: middle;
+    line-height: 200%;
 }
 
 img {
@@ -34,4 +39,35 @@ img {
     width: 100%;
     height: auto;
     z-index: 1;
+}
+
+input[type="button"] {
+    
+    background-color: #f1e5d4; /*  */
+    border: none;
+    border-radius: 20px;
+    color: black;
+    padding: 50px 100px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-family: "GowunBatangBold";
+    font-size: 35px;
+    margin: 4px 2px;
+    cursor: pointer;}
+
+#checkbox_div {
+    text-align: center;
+}
+
+input[type=checkbox] {
+    zoom: 3;
+}
+
+/* <input type="text" id="name_field"><br><br><br> */
+#name_field {
+    width: 350px;
+    height: 100px;
+    font-size: 20px;
+
 }
