@@ -45,10 +45,11 @@ function getScrrenSize() {
 }
 
 function setImageSize(imgID) {
-    alert("call");
     let img = document.getElementById(imgID);
     let x = getScrrenSize().height / img.height;     // 비율
 
-    img.width *= x;
-    img.height *= x;
+    // img.width *= x;
+    // img.height *= x;
+    alert(+(getScrrenSize().height - img.height))
+    // img.height = +(getScrrenSize().height - img.height)
 }

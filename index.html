@@ -2,21 +2,20 @@
     <head>
         <meta charset="UTF-8">
         <title>2024년 한밭대학교 졸업 학위 수여식</title>
-        <script src="scripts/handler.js"></script>
+        <script src="scripts/main.js"></script>
         <link rel="stylesheet", href="css/main.css">
         <script>
 
         </script>
     </head>
     <body>
-        <div>
+        <div id="checkbox_div">
             <input 
                 type="checkbox"
                 id="student" class="index_checkbox"
                 onclick="onClickCheckbox('index_checkbox', 'student')"
             />
-            <label for="student">재학생</label>
-            <br>
+            <label class="labelElement" for="student">재학생</label><br>
             <input 
                 type="checkbox" 
                 id="graduate" class="index_checkbox"
