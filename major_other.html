@@ -3,20 +3,13 @@
         <meta charset="UTF-8">
         <title>한밭대학교</title>
         <script src="scripts/main.js"></script>
-        <script>
-            window.onload = () => alert(getText())
-        </script>
         <link rel="stylesheet" href="css/main.css"/>
     </head>
     <body>
-        <div 
-            style="text-align: center;"
-            class="div_image"
-        >
-            <img 
-                src="resources/major_other.png"
-                class="image"
-            >
+        <div id="image_container">
+            <label id="image_label"></label>
+            <img src="resources/major_other.png" id="major_other_image"
+                onload="onLoadOtherImage('major_other_image', 'image_label')">
         </div>
     </body>
 </html>

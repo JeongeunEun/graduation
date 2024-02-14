@@ -10,7 +10,13 @@ function onClickCheckbox(className, id) {
 
 function onClickNextButton(next_page, callback=null) {
     if(next_page === null) {
-        alert("재학생 또는 졸업생을 선택해 주세요.");
+        alert("체크 박스를 선택해 주세요.");
+        return null;
+    }
+
+    textField = document.getElementById("name_field");
+    if((textField) && (textField.value.length <= 0)) {
+        alert("이름을 입력해 주세요.");
         return null;
     }
 
@@ -34,22 +40,75 @@ function getText() {
     return sessionStorage.getItem("text");
 }
 
-function getScrrenSize() {
-    let screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-    let screenHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
 
-    return {
-        width: screenWidth,
-        height: screenHeight
+function onLoadComputerImage(img_id, label_className) {
+    let img = document.getElementById(img_id);
+    let labels = document.getElementsByClassName(label_className);
+
+    defaultPosition = {
+        top1: 300,
+        left1: 450,
+        top2: 447,
+        left2: 390,
+        weight: 20
+    }
+    
+    let name = getText();
+    if(name.length > 3) {
+        defaultPosition.left1 -= defaultPosition.weight;
+        defaultPosition.left2 -= defaultPosition.weight;
+    }
+
+    // 공통 속성
+    for(let label of labels) {
+        label.style.position = "absolute";
+        label.innerText = name;
+        label.style.zIndex = 2;
+    }
+
+    // 개별 속성
+    labels[0].style.top = defaultPosition.top1;
+    labels[0].style.left = defaultPosition.left1;
+    labels[0].style.fontSize = "340%";
+
+    labels[1].style.top = defaultPosition.top2;
+    labels[1].style.left = defaultPosition.left2;
+    labels[1].style.fontSize = "200%";
+
+    // 이미지 위치 조정에 따른 레이블 위치 가중치
+    for(let label of labels) {
+        label.style.top = parseFloat(label.style.top) + img.getBoundingClientRect().top;
+        label.style.left = parseFloat(label.style.left) + img.getBoundingClientRect().left;
     }
 }
 
-function setImageSize(imgID) {
-    let img = document.getElementById(imgID);
-    let x = getScrrenSize().height / img.height;     // 비율
+function onLoadOtherImage(img_id, label_id) {
+    let img = document.getElementById(img_id);
+    let label = document.getElementById(label_id);
 
-    // img.width *= x;
-    // img.height *= x;
-    alert(+(getScrrenSize().height - img.height))
-    // img.height = +(getScrrenSize().height - img.height)
+    defaultPosition = {
+        top: 305,
+        left: 100,
+        weight: 45
+    }
+    
+    let name = getText();
+    if(name.length > 3) {
+        defaultPosition.left -= defaultPosition.weight;
+    }
+
+    // 공통 속성
+    label.style.position = "absolute";
+    label.innerText = name;
+    label.style.zIndex = 2;
+
+    // 개별 속성
+    label.style.top = defaultPosition.top;
+    label.style.left = defaultPosition.left;
+    label.style.fontSize = "320%";
+
+
+    // 이미지 위치 조정에 따른 레이블 위치 가중치
+    label.style.top = parseFloat(label.style.top) + img.getBoundingClientRect().top;
+    label.style.left = parseFloat(label.style.left) + img.getBoundingClientRect().left;
 }
