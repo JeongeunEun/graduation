@@ -1,0 +1,30 @@
+.checkbox_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50%;
+}
+
+.checkbox_wrap {
+    margin: 0% 5%;
+}
+
+.checkbox {
+    width: 35px;
+    height: 35px;
+}
+
+.checkbox_label {
+    font-size: 200%;
+}
+
+.next_button_container {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    margin-right: 10%;
+}
+
+.next_button {
+    font-size: 150%;
+}
