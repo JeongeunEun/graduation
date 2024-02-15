@@ -14,7 +14,7 @@ function onClickNextButton(next_page, callback=null) {
         return null;
     }
 
-    textField = document.getElementById("name_field");
+    textField = document.getElementById("input_field");
     if((textField) && (textField.value.length <= 0)) {
         alert("이름을 입력해 주세요.");
         return null;
@@ -111,4 +111,19 @@ function onLoadOtherImage(img_id, label_id) {
     // 이미지 위치 조정에 따른 레이블 위치 가중치
     label.style.top = parseFloat(label.style.top) + img.getBoundingClientRect().top;
     label.style.left = parseFloat(label.style.left) + img.getBoundingClientRect().left;
+}
+
+function getNameComPage() {
+    text1 = document.getElementById("main_text");
+    text2 = document.getElementById("sub_text");
+
+    name = getText();
+
+    text1.innerText = `컴퓨터공학과 ${name}, 졸업하다.`;
+    text2.innerText = `${name} 수고했다`
+}
+
+function getNameOtherPage() {
+    text1 = document.getElementById("main_text");
+    text1.innerText = `${getText()} 선배님, 졸업 축하드립니다`;
 }

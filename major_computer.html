@@ -5,6 +5,9 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/result_page.css">
     <script src="scripts/main.js"></script>
+    <script>
+        window.onload = () => {getNameComPage()};
+    </script>
 </head>
 <body>
     <div class="title_container">
@@ -21,7 +24,7 @@
         </div>
     </div>
     <div class="main_text_container">
-        <div class="main_text">
+        <div class="main_text" id="main_text">
             컴퓨터공학과 김아무개, 졸업하다.
         </div>
     </div>
@@ -29,7 +32,7 @@
         <div class="cheer_text">
             경험치 획득
         </div>
-        <div class="cheer_text">
+        <div class="cheer_text" id="sub_text">
             김아무개 수고했다.
         </div>
         <div class="cheer_text">
