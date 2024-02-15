@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>졸업생</title>
+        <script src="scripts/main.js"></script>
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/graduate.css">
+    </head>
+    <body>
+        <div class="input_name_container">
+            <label class="input_label">이름을 입력해 주세요.</label>
+            <input type="text" class="input_field" id="input_field">
+        </div>
+        <div class="checkbox_container">
+            <div class="checkbox_wrap">
+                <input class="checkbox" id="major_computer" type="checkbox"
+                    onclick="onClickCheckbox('checkbox', 'major_computer')">
+                <label for="major_computer" class="checkbox_label">컴공</label>
+            </div>
+            <div class="checkbox_wrap">
+                <input class="checkbox" id="major_other" type="checkbox"
+                    onclick="onClickCheckbox('checkbox', 'major_other')">
+                <label for="major_other" class="checkbox_label">그 외</label>
+            </div>
+        </div>
+        <div class="next_button_container">
+            <input class="next_button" type="button" value="다음"
+                onclick="onClickNextButton(
+                    getPageWithCheckbox('checkbox'),
+                    () => {sessionStorage.setItem('text', document.getElementById('input_field').value)}
+                )">
+        </div>
+    </body>
+</html>

@@ -1,0 +1,27 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Eclipse</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/index_page.css">
+    <script src="scripts/main.js"></script>
+</head>
+<body>
+    <div class="checkbox_container">
+        <div class="checkbox_wrap">
+            <input class="checkbox" id="student" type="checkbox"
+                onclick="onClickCheckbox('checkbox', 'student')">
+            <label for="student" class="checkbox_label">재학생</label>
+        </div>
+        <div class="checkbox_wrap">
+            <input class="checkbox" id="graduate" type="checkbox"
+                onclick="onClickCheckbox('checkbox', 'graduate')">
+            <label for="graduate" class="checkbox_label">졸업생</label>
+        </div>
+    </div>
+    <div class="next_button_container">
+        <input class="next_button" type="button" value="다음"
+            onclick="onClickNextButton(getPageWithCheckbox('checkbox'))">
+    </div>
+</body>
+</html>
