@@ -4,12 +4,12 @@
 
 @font-face {
     font-family: "title_font";
-    src: url("../resources/baskvl.ttf");
+    src: url("baskvl.ttf");
 }
 
 @font-face {
     font-family: "default_font";
-    src: url("../resources/GowunBatangBold.ttf");
+    src: url("GowunBatangBold.ttf");
 }
 
 html, body {
